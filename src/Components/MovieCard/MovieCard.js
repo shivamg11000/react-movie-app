@@ -18,10 +18,11 @@ class MovieCard extends Component {
       rating="",
     } = this.props.movie_meta_data
 
+
 		const img_src = window.innerWidth>725?poster_src_vertical:poster_src_horizontal
 
     const style = {
-      background: `url(${img_src})`,
+      backgroundImage: `url(${img_src})`,
     }
 
     return (

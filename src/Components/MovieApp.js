@@ -77,6 +77,7 @@ class MovieApp extends Component{
         })
       })
       .fail(() => console.log("error in ajax"))
+
   }
 
   componentDidMount(){
