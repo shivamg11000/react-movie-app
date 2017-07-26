@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 
+import MovieApp from './Components/MovieApp';
+
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-       I am APP
+        <MovieApp></MovieApp>
       </div>
     );
   }

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300");
+form {
+  display: flex; }
+  form .logo {
+    width: 13%;
+    max-width: 75px;
+    margin-left: 5%; }
+    form .logo img {
+      width: 100%; }
+  form .search-bar {
+    width: 55%;
+    margin-left: 10%;
+    position: relative; }
+    form .search-bar input[type='text'] {
+      background-color: transparent;
+      border: 0;
+      border-bottom: 2px solid white;
+      width: 100%;
+      height: 50px;
+      font-size: 28px;
+      font-family: 'Raleway', sans-serif;
+      padding: 0 10px;
+      box-sizing: border-box; }
+    form .search-bar input[type='text']::placeholder {
+      font-size: 28px;
+      color: black;
+      font-family: 'Raleway', sans-serif; }
+    form .search-bar input[type='text']:focus {
+      outline: none; }
+    form .search-bar ul {
+      width: 100%;
+      position: absolute;
+      box-sizing: border-box;
+      background-color: #dddddd;
+      border-radius: 5px;
+      box-shadow: -5px 5px rgba(0, 0, 0, 0.6);
+      z-index: +1; }
+      form .search-bar ul li {
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        padding: 10px 25px;
+        border-bottom: 1px solid rgba(231, 7, 231, 0.1);
+        box-sizing: border-box; }
+      form .search-bar ul li:hover {
+        background-color: rgba(231, 7, 231, 0.2); }
+
+@media (max-width: 725px) {
+  form .search-bar input[type='text'] {
+    border-color: #DE522E;
+    color: white; }
+  form .search-bar input[type='text']::placeholder {
+    color: white; }
+  form .search-bar ul {
+    background-color: #34d0dF;
+    box-shadow: -5px 5px rgba(255, 255, 255, 0.9); }
+    form .search-bar ul li {
+      padding: 8px 15px; } }
+
+@media (max-width: 500px) {
+  form .search-bar input[type='text'] {
+    font-size: 20px; }
+  form .search-bar input[type='text']::placeholder {
+    font-size: 20px; } }
