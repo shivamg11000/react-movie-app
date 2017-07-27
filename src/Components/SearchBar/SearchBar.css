@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300");
 form {
-  display: flex; }
+  display: flex;
+  position: relative; }
   form .logo {
     width: 13%;
     max-width: 75px;
-    margin-left: 5%; }
+    margin-left: 9.5%;
+    box-sizing: border-box; }
     form .logo img {
       width: 100%; }
   form .search-bar {
+    box-sizing: border-box;
     width: 55%;
-    margin-left: 10%;
+    margin-left: 9.5%;
     position: relative; }
     form .search-bar input[type='text'] {
       background-color: transparent;
