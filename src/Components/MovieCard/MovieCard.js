@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import LoaderHOC from '../HOCs/LoaderHOC';
 import './MovieCard.css';
 
 const Stars = (n, max = 5) => {
@@ -51,4 +52,4 @@ class MovieCard extends Component {
   }
 }
 
-export default MovieCard;
+export default LoaderHOC(MovieCard);
