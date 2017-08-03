@@ -13,7 +13,8 @@ class MovieApp extends Component{
       input : "",
       suggestions: [],
       suggestionClicked : false,   //initially suggestion is not clicked
-      movie_meta_data: {}          //change,rmove this if want to modify the MovieCard
+      movie_meta_data: {},          //change,rmove this if want to modify the MovieCard
+      dataLoaded: true
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.fetch_data_by_search = this.fetch_data_by_search.bind(this)
@@ -29,7 +30,10 @@ class MovieApp extends Component{
       this.fetch_data_by_search(newInput)
   }
   click_a_suggestion(id_selected){
-    this.setState({ suggestionClicked: true })   //on click a suggestion, hide the suggestions
+    this.setState({
+       suggestionClicked: true,
+       dataLoaded: false
+      })   //on click a suggestion, hide the suggestions
     const suggestion = this.state.suggestions.find(suggestion => suggestion.id===id_selected)
     this.fetch_data_by_id(suggestion.id)
   }
@@ -73,7 +77,8 @@ class MovieApp extends Component{
             running_time: response.runtime,
             rating: response.vote_average,
             genres: response.genres.map(obj => obj.name)
-          }
+          } ,
+          dataLoaded: true
         })
       })
       .fail(() => console.log("error in ajax"))
@@ -93,7 +98,7 @@ class MovieApp extends Component{
           click_a_suggestion={this.click_a_suggestion}
           suggestionClicked={this.state.suggestionClicked}
           />
-        <MovieCard movie_meta_data={this.state.movie_meta_data}/>
+        <MovieCard movie_meta_data={this.state.movie_meta_data} dataLoaded={this.state.dataLoaded}/>
       </div>
     )
   }
