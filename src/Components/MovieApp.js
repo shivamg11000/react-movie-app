@@ -45,7 +45,7 @@ class MovieApp extends Component{
     })
       .done((response) => {
         let results = response.results        //sort( popularity ) later and remvoe obj without dates
-        results = results.filter(result => !!result.release_date)
+        results = results.filter(result => !!result.release_date).filter((result,i) => i<7)
         const suggestions = results.map(obj => {
           return {
             id: obj.id,
