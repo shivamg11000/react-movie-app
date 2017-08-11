@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300')
+
+form
+  display: flex
+  position: relative
+  .logo
+    width: 13%
+    max-width: 75px
+    margin-left: 9.5%
+    box-sizing: border-box
+    img
+      width: 100%
+  .search-bar
+    box-sizing: border-box
+    width: 55%
+    margin-left: 9.5%
+    position: relative
+    input[type='text']
+      background-color: rgba(0,0,0,0)
+      border: 0
+      border-bottom: 2px solid white
+      width: 100%
+      height: 50px
+      font-size: 28px
+      font-family: 'Raleway', sans-serif
+      padding: 0 10px
+      box-sizing: border-box
+    input[type='text']::placeholder
+      font-size: 28px
+      color: black
+      font-family: 'Raleway', sans-serif
+    input[type='text']:focus
+      outline: none
+    ul
+      width: 100%
+      position: absolute
+      box-sizing: border-box
+      background-color: #dddddd
+      border-radius: 5px
+      box-shadow: -5px 5px rgba(0,0,0,0.6)
+      z-index: +1
+      li
+        font-family: 'Raleway', sans-serif
+        font-size: 18px
+        padding: 10px 25px
+        border-bottom: 1px solid rgba(231,7,231,0.1)
+        box-sizing: border-box
+      li:hover
+        background-color: rgba(231,7,231,0.2)
+
+@media (max-width:725px)
+  form
+    .search-bar
+      input[type='text']
+        border-color: #DE522E
+        color: white
+      input[type='text']::placeholder
+        color: white
+      ul
+        background-color: #34d0dF
+        box-shadow: -5px 5px rgba(255,255,255,0.9)
+        li
+          padding: 8px 15px
+
+@media (max-width:500px)
+  form
+    .search-bar
+      input[type='text']
+        font-size: 20px
+      input[type='text']::placeholder
+        font-size: 20px
